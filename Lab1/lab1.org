@@ -158,11 +158,6 @@ For the purposes of this course, we will use GNU Emacs as our text editor, and i
   - ~M-x~. Copy selected text. (Here M is the =Alt= key for windows/linux users, the =Command= key for Mac users)
   - ~C-y~. Paste cut/copied text.
 
-- We could change these shortcuts to work like what we are used to, but ...
-
-#+caption: Emacs graphic from @sachac
-[[./images/Emacs.png]]
-
 - To close emacs, you can click on the 'X' sign on the corner of your screen or type, ~C-x C-c~.
   
 - Now that you are back at your terminal, use emacs to open the notes for today's lab. Change into the the directory you just cloned, and type ~emacs lab1.org~. This is the org-mode file that was used to create the pdf. All the commands that you just ran in the terminal were run inside this document!

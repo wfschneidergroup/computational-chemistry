@@ -1,4 +1,4 @@
-% Created 2015-01-15 Thu 22:26
+% Created 2015-01-16 Fri 11:55
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -167,17 +167,17 @@ u.pmehta1                    100 GB     57 GB   57%         87%
 \subsection{Obtaining lab notes}
 \label{sec-1-3}
 
-The lab notes and homeworks can be obtained from the course website. They are also conveniently stored in a git repository at \url{https://github.com/wfschneidergroup/CBE547}. To obtain the files just type in
+The lab notes and homeworks can be obtained from the course website. They are also conveniently stored in a git repository. To obtain the files just type in
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
-git clone https://github.com/wfschneidergroup/CBE547
+git clone https://github.com/wfschneidergroup/computational-chemistry
 \end{minted}
 
 
 You can periodically update your copy of the notes by changing into the course directory and running the command \verb~git pull~, i.e.,
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
-cd CBE547
+cd computational-chemistry
 git pull
 \end{minted}
 
@@ -210,16 +210,6 @@ Here are a few things to get started.
 \item \verb~C-y~. Paste cut/copied text.
 \end{itemize}
 
-\item We could change these shortcuts to work like what we are used to, but \ldots{}
-\end{itemize}
-
-\begin{figure}[htb]
-\centering
-\includegraphics[width=.9\linewidth]{./images/Emacs.png}
-\caption{Emacs graphic from @sacha}
-\end{figure}
-
-\begin{itemize}
 \item To close emacs, you can click on the 'X' sign on the corner of your screen or type, \verb~C-x C-c~.
 
 \item Now that you are back at your terminal, use emacs to open the notes for today's lab. Change into the the directory you just cloned, and type \verb~emacs lab1.org~. This is the org-mode file that was used to create the pdf. All the commands that you just ran in the terminal were run inside this document!
