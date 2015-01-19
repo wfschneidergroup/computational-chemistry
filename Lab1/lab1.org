@@ -17,7 +17,7 @@
 
 \maketitle
 
-* Introduction to Linux (15 minutes)
+* Introduction to Linux
 
 Much of the work in this course will involve some use of the unix terminal. Mac and Linux users can access the terminal from their applications menu. Windows users will probably need to use normally use putty to login to the CRC machines to use a linux environment.
 
@@ -33,7 +33,7 @@ ssh -Y username@crcfe01.crc.nd.edu
 
 
 ** Common Linux Commands
-
+   
 Here is a list of common linux commands, along with an example of their output. Try typing these in your terminal window.
 
  - ~ls~: List the contents of a directory
@@ -43,12 +43,12 @@ ls
 #+END_SRC
 
 #+RESULTS:
+: FDA
 : images
 : lab1.org
 : lab1.pdf
 : Lab1.png
 : lab1.tex
-: ltxpng
 
  - ~pwd~: Get the path of the current directory
 
@@ -57,7 +57,7 @@ pwd
 #+END_SRC
 
 #+RESULTS:
-: /afs/crc.nd.edu/user/p/pmehta1/CBE547/Lab1
+: /afs/crc.nd.edu/user/p/pmehta1/computational-chemistry/Lab1
 
  - ~mkdir~: Create a directory
 
@@ -68,12 +68,12 @@ ls
 
 #+RESULTS:
 : example-directory
+: FDA
 : images
 : lab1.org
 : lab1.pdf
 : Lab1.png
 : lab1.tex
-: ltxpng
 
  - ~cd~: Change directory
 
@@ -85,21 +85,21 @@ pwd
 #+END_SRC
 
 #+RESULTS:
-: /afs/crc.nd.edu/user/p/pmehta1/CBE547/Lab1/example-directory
-: /afs/crc.nd.edu/user/p/pmehta1/CBE547/Lab1
+: /afs/crc.nd.edu/user/p/pmehta1/computational-chemistry/Lab1/example-directory
+: /afs/crc.nd.edu/user/p/pmehta1/computational-chemistry/Lab1
 
-- ~cp~ Copying files
+- ~cp~ Copy files
 #+BEGIN_SRC sh
 cp file1 file2
 #+END_SRC
 
 
-- ~mv~: Moving files
+- ~mv~: Move files
 #+BEGIN_SRC sh
 mv file1 file2
 #+END_SRC
 
-- ~rm~: Removing files
+- ~rm~: Remove files
 #+BEGIN_SRC sh
 rm filename
 #+END_SRC
@@ -114,7 +114,7 @@ quota
 : AFS quota using values reported by vos server for partition
 : Quota for /afs/crc.nd.edu/user/p/pmehta1 
 : Volume Name                   Quota      Used %Used   Partition
-: u.pmehta1                    100 GB     57 GB   57%         87%
+: u.pmehta1                    100 GB     55 GB   55%         87%
 
 
 ** Obtaining lab notes
@@ -125,7 +125,6 @@ The lab notes and homeworks can be obtained from the course website. They are al
 git clone https://github.com/wfschneidergroup/computational-chemistry
 #+END_SRC
 
-
 You can periodically update your copy of the notes by changing into the course directory and running the command ~git pull~, i.e.,
 
 #+BEGIN_SRC sh
@@ -134,7 +133,7 @@ git pull
 #+END_SRC
 
 
-* The very least you have to know about GNU Emacs (20 minutes)
+* The very least you have to know about GNU Emacs
 
 For the purposes of this course, we will use GNU Emacs as our text editor, and in particular Emacs org-mode. Getting started with it can be a little challenging, but learning how to use it offers many benefits, which we shall soon see. If you really, really want to use another editor, you are free to do so, but it is likely that you will lose some customized emacs features which will help you with this course.
 
@@ -168,13 +167,14 @@ For the purposes of this course, we will use GNU Emacs as our text editor, and i
 
 - $H\psi = E\psi$
 
+- *Tip:* If you find yourself stuck somewhere, type <ESC> four times or type ~C-g~.
 
 
-* Introduction to Python (40 minutes)
+* Introduction to Python
+  
+Python is a programming language which we will use to solve many of the homework problems, especially density functional theory calculations using VASP (homeworks 5, homework 6, and probably your class project). It is therefore important that you familiarize yourself with using it. The numerical and plotting features in python are mostly similar to =MATLAB=, with a few subtle differences. I would recommend that you try to solve the first problem in homework 2 using python. A few examples are below (adapted from John Kitchin's example files). We won't cover all of these, but you can use them for reference. To execute a code block type ~C-c C-c~.
 
-Python is a programming language which we will use to solve many of the homework problems, especially density functional theory calculations using VASP (homeworks 5, homework 6, and probably your class project). It is therefore important that you familiarize yourself with using it. The numerical and plotting features in python are mostly similar to =MATLAB=, with a few subtle differences. I would recommend that you try to solve the first problem in homework 2 using python. A few examples are below (adapted from John Kitchin's example files). We won't cover all of these, but you can use them for reference.
-
-** Simple calculations (5 minutes)
+** Simple calculations
 
 A good overview of basic python operators can be found at http://www.tutorialspoint.com/python/python_basic_operators.htm
 
@@ -242,7 +242,7 @@ print 5. % 4.
 : 1.0
 
 
-** Formatted printing (5 minutes)
+** Formatted printing
 http://docs.python.org/library/stdtypes.html#string-formatting-operations
 
 We will usually want to print more than a number, e.g. some descriptive text and the number. We also will want to format numbers so we do not see 9 decimal places all the time. We use string formatting for that. Here are some typical examples.
@@ -291,7 +291,7 @@ print 'a = {0:1.3f}'.format(a)
 : a = 0.667
 
 
-** Data types (5 minutes)
+** Data types
 Numeric types http://docs.python.org/library/stdtypes.html#numeric-types-int-float-long-complex
 
 Strings http://docs.python.org/library/stdtypes.html#string-methods
@@ -352,6 +352,7 @@ print a
 : [1, 56, 3, 4]
 
 Tuples are like lists except they cannot be modified after creation.
+
 #+BEGIN_SRC python
 a = (1,2,3,4)
 print len(a)
@@ -366,7 +367,7 @@ print a[-1]
 : 
 
 
-** Conditional statements (5 minutes)
+** Conditional statements
 conditional operators http://docs.python.org/library/stdtypes.html#comparisons
 
 Python has the standard conditional operators for testing if a quantity is equal to (==), less than (<), greater than (>), lessthan or equal to (<=) greater than or equal to (>=) and not equal (!=). These generally work on numbers and strings.
@@ -448,7 +449,7 @@ else:
 : a is greater than or equal to b
 
 
-** Loops(1 minute)
+** Loops
 http://docs.python.org/tutorial/datastructures.html#looping-techniques
 for
 while/break/continue
@@ -464,7 +465,7 @@ for i in range(4):
 #+END_SRC
 
 
-** functions (1 minute)
+** functions
 http://docs.python.org/tutorial/controlflow.html#defining-functions
 
 We can define functions with the =def= statement, and specify what they =return=
@@ -480,11 +481,11 @@ print myfunc(x=3)
 : 9
 
 
-** Classes and objects                                             :noexport:
+** Classes and objects                                             
 http://docs.python.org/tutorial/classes.html
 
 
-** Modules (2 minutes)
+** Modules
 http://docs.python.org/tutorial/modules.html
 
 The default Python environment has minimal functionality. We can =import= additional functionality from modules. The full standard library is documented at http://docs.python.org/library/. It is not likely you will use everything there, but it is helpful to be familiar with what is available so you do not reinvent solutions.
@@ -534,12 +535,12 @@ http://docs.python.org/tutorial/stdlib.html
 os, sys, glob,  re
 
 
-** file I/O                                                        :noexport:
+** file I/O
 reading, writing files
 http://docs.python.org/library/stdtypes.html#file-objects
 
 
-** Error handling (1 minute)
+** Error handling 
 http://docs.python.org/tutorial/errors.html
 
 Errors happen, and when they do they usually kill your script. Sometimes that is not desirable, and it is nice to catch errors, handle them, and keep on going. When errors occur in python, an Exception is raised. We can use =try/except= code blocks to try some code, and then respond to any exceptions that occur.
@@ -756,8 +757,37 @@ print type(x)
 
 
 
-*** TODO Integration Example
+*** Integration Example
 
+**** Using Quad
+#+BEGIN_SRC python
+from scipy.integrate import quad
+
+def integrand(x):
+    return x**3
+
+ans, err = quad(integrand, 0, 2)
+print ans
+#+END_SRC
+
+#+RESULTS:
+: 4.0
+
+
+**** Using trapz
+
+#+BEGIN_SRC python
+import numpy as np
+
+# Array of 100 points between 0 and 2
+x2 = np.linspace(0, 2, 100)
+y2 = x2**3
+
+print np.trapz(y2, x2)
+#+END_SRC
+
+#+RESULTS:
+: 4.00040812162
 
 
 ** Plotting with Python (Matplotlib)
@@ -783,9 +813,75 @@ plt.show()
 #+RESULTS:
 
 
-[[./Lab1.png]]
+[[./images/Lab1.png]]
 
 
+* FDA
+  
+Now let us run our first computational chemistry code. Change into the ~computational-chemistry/Lab1/FDA/fda~ directory and run the command,
 
+#+BEGIN_SRC sh
+./fda Ar
+#+END_SRC
 
+This will use the =Ar.inp= file as input and produce two output files, =Ar.dmp= and =Ar.out=. The =00READ.ME= file contains some information about the format of the input file. You can open these files with Emacs to read what they contain.
+
+** Parsing the dmp file
+
+In homework 2, you will need to parse the =.dmp= file to plot some data. It contains the radial grid values and total charge density in two columns, followed by the charge density of each oribital on the same grid. Here we consider an example of how to do this with python.
+
+#+BEGIN_SRC python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Lets open the file in read mode
+with open('FDA/fda/Ar.dmp', 'r') as f:
+
+    # Reading all the lines in the file
+    # Each line is stored as an element of a list
+    lines = f.readlines()
+
+    # First we read the grid points and the total charge densities
+    grid_points = []
+    total_charge_densities = []
+
+    for line in lines[3:303]:
+
+        # Each is a string with two columns
+        grid_point, tot_charge_density = line.split()
+
+        # We need to convert each line to a float add it to our lists
+        grid_points.append(float(grid_point))
+        total_charge_densities.append(float(tot_charge_density))
+    
+    # Now for the 1s orbital
+    one_s_charge_density = []
+    
+    for x in lines[304:604]:
+        one_s_charge_density.append(x)
+ 
+    # Alternately,
+    one_s_charge_density_alt = [float(x) for x in lines[304:604]]
+
+plt.figure()
+plt.semilogx(grid_points, total_charge_densities)
+plt.xlabel('Grid Points')
+plt.ylabel('Charge Density')
+plt.title('Overall')
+plt.savefig('images/Ar-overall-charge-density.png')
+
+plt.figure()
+plt.semilogx(grid_points, one_s_charge_density)
+plt.xlabel('Grid Points')
+plt.ylabel('Charge Density')
+plt.title('1s orbital')
+plt.savefig('images/Ar-1s-charge-density.png')
+plt.show()
+#+END_SRC
+
+#+RESULTS:
+
+[[./images/Ar-overall-charge-density.png]]
+
+[[./images/Ar-1s-charge-density.png]]
 
