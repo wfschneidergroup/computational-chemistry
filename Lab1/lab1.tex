@@ -1,4 +1,4 @@
-% Created 2015-01-16 Fri 11:55
+% Created 2015-01-18 Sun 21:40
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -40,7 +40,7 @@ citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
 
 \maketitle
 
-\section{Introduction to Linux (15 minutes)}
+\section{Introduction to Linux}
 \label{sec-1}
 
 Much of the work in this course will involve some use of the unix terminal. Mac and Linux users can access the terminal from their applications menu. Windows users will probably need to use normally use putty to login to the CRC machines to use a linux environment.
@@ -71,12 +71,12 @@ ls
 \end{minted}
 
 \begin{verbatim}
+FDA
 images
 lab1.org
 lab1.pdf
 Lab1.png
 lab1.tex
-ltxpng
 \end{verbatim}
 
 \begin{itemize}
@@ -88,7 +88,7 @@ pwd
 \end{minted}
 
 \begin{verbatim}
-/afs/crc.nd.edu/user/p/pmehta1/CBE547/Lab1
+/afs/crc.nd.edu/user/p/pmehta1/computational-chemistry/Lab1
 \end{verbatim}
 
 \begin{itemize}
@@ -102,12 +102,12 @@ ls
 
 \begin{verbatim}
 example-directory
+FDA
 images
 lab1.org
 lab1.pdf
 Lab1.png
 lab1.tex
-ltxpng
 \end{verbatim}
 
 \begin{itemize}
@@ -122,12 +122,12 @@ pwd
 \end{minted}
 
 \begin{verbatim}
-/afs/crc.nd.edu/user/p/pmehta1/CBE547/Lab1/example-directory
-/afs/crc.nd.edu/user/p/pmehta1/CBE547/Lab1
+/afs/crc.nd.edu/user/p/pmehta1/computational-chemistry/Lab1/example-directory
+/afs/crc.nd.edu/user/p/pmehta1/computational-chemistry/Lab1
 \end{verbatim}
 
 \begin{itemize}
-\item \verb~cp~ Copying files
+\item \verb~cp~ Copy files
 \end{itemize}
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
 cp file1 file2
@@ -135,14 +135,14 @@ cp file1 file2
 
 
 \begin{itemize}
-\item \verb~mv~: Moving files
+\item \verb~mv~: Move files
 \end{itemize}
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
 mv file1 file2
 \end{minted}
 
 \begin{itemize}
-\item \verb~rm~: Removing files
+\item \verb~rm~: Remove files
 \end{itemize}
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
 rm filename
@@ -160,7 +160,7 @@ quota
 AFS quota using values reported by vos server for partition
 Quota for /afs/crc.nd.edu/user/p/pmehta1 
 Volume Name                   Quota      Used %Used   Partition
-u.pmehta1                    100 GB     57 GB   57%         87%
+u.pmehta1                    100 GB     55 GB   55%         87%
 \end{verbatim}
 
 
@@ -173,7 +173,6 @@ The lab notes and homeworks can be obtained from the course website. They are al
 git clone https://github.com/wfschneidergroup/computational-chemistry
 \end{minted}
 
-
 You can periodically update your copy of the notes by changing into the course directory and running the command \verb~git pull~, i.e.,
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
@@ -182,7 +181,7 @@ git pull
 \end{minted}
 
 
-\section{The very least you have to know about GNU Emacs (20 minutes)}
+\section{The very least you have to know about GNU Emacs}
 \label{sec-2}
 
 For the purposes of this course, we will use GNU Emacs as our text editor, and in particular Emacs org-mode. Getting started with it can be a little challenging, but learning how to use it offers many benefits, which we shall soon see. If you really, really want to use another editor, you are free to do so, but it is likely that you will lose some customized emacs features which will help you with this course.
@@ -219,16 +218,17 @@ Here are a few things to get started.
 \item Finally, we will consider how to run an emacs command, namely one that will make the equations in the document readable. Type \verb~M-x~. Now type \verb~org-toggle-latex-overlays~. Alternately, you can click on this link, \url{org-toggle-latex-overlays}. You should be able to see the Schrodinger equation below.
 
 \item $H\psi = E\psi$
+
+\item \textbf{Tip:} If you find yourself stuck somewhere, type <ESC> four times or type \verb~C-g~.
 \end{itemize}
 
 
-
-\section{Introduction to Python (40 minutes)}
+\section{Introduction to Python}
 \label{sec-3}
 
-Python is a programming language which we will use to solve many of the homework problems, especially density functional theory calculations using VASP (homeworks 5, homework 6, and probably your class project). It is therefore important that you familiarize yourself with using it. The numerical and plotting features in python are mostly similar to \texttt{MATLAB}, with a few subtle differences. I would recommend that you try to solve the first problem in homework 2 using python. A few examples are below (adapted from John Kitchin's example files). We won't cover all of these, but you can use them for reference.
+Python is a programming language which we will use to solve many of the homework problems, especially density functional theory calculations using VASP (homeworks 5, homework 6, and probably your class project). It is therefore important that you familiarize yourself with using it. The numerical and plotting features in python are mostly similar to \texttt{MATLAB}, with a few subtle differences. I would recommend that you try to solve the first problem in homework 2 using python. A few examples are below, adapted (a fancy way of saying pretty much copied) from John Kitchin's example files. We won't cover all of these, but you can use them for reference. To execute a code block type \verb~C-c C-c~.
 
-\subsection{Simple calculations (5 minutes)}
+\subsection{Simple calculations}
 \label{sec-3-1}
 
 A good overview of basic python operators can be found at \url{http://www.tutorialspoint.com/python/python_basic_operators.htm}
@@ -302,7 +302,7 @@ print 5. % 4.
 \end{verbatim}
 
 
-\subsection{Formatted printing (5 minutes)}
+\subsection{Formatted printing}
 \label{sec-3-2}
 \url{http://docs.python.org/library/stdtypes.html#string-formatting-operations}
 
@@ -356,7 +356,7 @@ a = 0.667
 \end{verbatim}
 
 
-\subsection{Data types (5 minutes)}
+\subsection{Data types}
 \label{sec-3-3}
 Numeric types \url{http://docs.python.org/library/stdtypes.html#numeric-types-int-float-long-complex}
 
@@ -422,6 +422,7 @@ print a
 \end{verbatim}
 
 Tuples are like lists except they cannot be modified after creation.
+
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{python}
 a = (1,2,3,4)
 print len(a)
@@ -437,7 +438,7 @@ print a[-1]
 \end{verbatim}
 
 
-\subsection{Conditional statements (5 minutes)}
+\subsection{Conditional statements}
 \label{sec-3-4}
 conditional operators \url{http://docs.python.org/library/stdtypes.html#comparisons}
 
@@ -525,7 +526,7 @@ a is greater than or equal to b
 \end{verbatim}
 
 
-\subsection{Loops(1 minute)}
+\subsection{Loops}
 \label{sec-3-5}
 \url{http://docs.python.org/tutorial/datastructures.html#looping-techniques}
 for
@@ -542,7 +543,7 @@ for i in range(4):
 \end{minted}
 
 
-\subsection{functions (1 minute)}
+\subsection{functions}
 \label{sec-3-6}
 \url{http://docs.python.org/tutorial/controlflow.html#defining-functions}
 
@@ -560,8 +561,13 @@ print myfunc(x=3)
 \end{verbatim}
 
 
-\subsection{Modules (2 minutes)}
+\subsection{Classes and objects}
 \label{sec-3-7}
+\url{http://docs.python.org/tutorial/classes.html}
+
+
+\subsection{Modules}
+\label{sec-3-8}
 \url{http://docs.python.org/tutorial/modules.html}
 
 The default Python environment has minimal functionality. We can \texttt{import} additional functionality from modules. The full standard library is documented at \url{http://docs.python.org/library/}. It is not likely you will use everything there, but it is helpful to be familiar with what is available so you do not reinvent solutions.
@@ -610,13 +616,19 @@ lab1.tex
 \end{verbatim}
 
 \subsubsection{Some common standard modules}
-\label{sec-3-7-1}
+\label{sec-3-8-1}
 \url{http://docs.python.org/tutorial/stdlib.html}
 os, sys, glob,  re
 
 
-\subsection{Error handling (1 minute)}
-\label{sec-3-8}
+\subsection{file I/O}
+\label{sec-3-9}
+reading, writing files
+\url{http://docs.python.org/library/stdtypes.html#file-objects}
+
+
+\subsection{Error handling}
+\label{sec-3-10}
 \url{http://docs.python.org/tutorial/errors.html}
 
 Errors happen, and when they do they usually kill your script. Sometimes that is not desirable, and it is nice to catch errors, handle them, and keep on going. When errors occur in python, an Exception is raised. We can use \texttt{try/except} code blocks to try some code, and then respond to any exceptions that occur.
@@ -636,10 +648,10 @@ an error was found
 
 
 \subsection{Numerical Python (Numpy)}
-\label{sec-3-9}
+\label{sec-3-11}
 
 \subsubsection{The basics}
-\label{sec-3-9-1}
+\label{sec-3-11-1}
 \url{http://docs.scipy.org/doc/numpy/reference/}
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{python}
@@ -695,7 +707,7 @@ Below are some recipes for doing linear algebra and polynomials.
 
 
 \subsubsection{Linear algebra}
-\label{sec-3-9-2}
+\label{sec-3-11-2}
 \texttt{numpy.linalg} provides a lot of the linear algebra functionality we need. See \url{http://docs.scipy.org/doc/numpy/reference/routines.linalg.html} for details of all the things that are possible. For example, given these linear equations:
 
 $x + y = 3$, 
@@ -766,7 +778,7 @@ print x
 
 
 \subsubsection{Polynomials}
-\label{sec-3-9-3}
+\label{sec-3-11-3}
 \texttt{numpy} can do polynomials too. We express polynomials by the coefficients in front of the powers of $x$, e.g. $4 x^2 + 2x - 1 = 0$ is represented by [4, 2, -1].
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{python}
@@ -821,14 +833,14 @@ intercept = 1.0
 
 
 \subsection{Scientific Python (Scipy)}
-\label{sec-3-10}
+\label{sec-3-12}
 \url{http://docs.scipy.org/doc/scipy/reference/}
 
 \texttt{scipy} provides all the functionality we need for \href{http://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html}{integration}, \href{http://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html}{optimization}, \href{http://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html}{interpolation}, \href{http://docs.scipy.org/doc/scipy/reference/tutorial/stats.html}{statistics}, and \href{http://docs.scipy.org/doc/scipy/reference/tutorial/io.html}{File I/O}. You should look up the link on integration. It might be useful for homework 2.
 
 
 \subsubsection{Solving Equations}
-\label{sec-3-10-1}
+\label{sec-3-12-1}
 Here is a typical usage for solving the equation $x^2 = 2$ for $x$. We have to define a function that is $f(x) = 0$, and then use the \texttt{scipy.optimize.fsolve} function to solve it with an initial guess.
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{python}
@@ -851,13 +863,48 @@ print type(x)
 
 
 
-\subsubsection{{\bfseries\sffamily TODO} Integration Example}
-\label{sec-3-10-2}
+\subsubsection{Integration Example}
+\label{sec-3-12-2}
 
+\begin{enumerate}
+\item Using Quad
+\label{sec-3-12-2-1}
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{python}
+from scipy.integrate import quad
+
+def integrand(x):
+    return x**3
+
+ans, err = quad(integrand, 0, 2)
+print ans
+\end{minted}
+
+\begin{verbatim}
+4.0
+\end{verbatim}
+
+
+\item Using trapz
+\label{sec-3-12-2-2}
+
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{python}
+import numpy as np
+
+# Array of 100 points between 0 and 2
+x2 = np.linspace(0, 2, 100)
+y2 = x2**3
+
+print np.trapz(y2, x2)
+\end{minted}
+
+\begin{verbatim}
+4.00040812162
+\end{verbatim}
+\end{enumerate}
 
 
 \subsection{Plotting with Python (Matplotlib)}
-\label{sec-3-11}
+\label{sec-3-13}
 \url{http://matplotlib.sourceforge.net/}
 \texttt{matplotlib} is the prime plotting module for python. The syntax is similar to Matlab. The best way to learn matplotlib is to visit the gallery (\url{http://matplotlib.sourceforge.net/gallery.html}) and look for examples that do what you want. Here is a simple example.
 
@@ -877,6 +924,76 @@ plt.savefig('Lab1.png')
 plt.show()
 \end{minted}
 
-\includegraphics[width=.9\linewidth]{./Lab1.png}
+\includegraphics[width=.9\linewidth]{./images/Lab1.png}
+
+
+\section{FDA}
+\label{sec-4}
+
+Now let us run our first computational chemistry code. Change into the \verb~computational-chemistry/Lab1/FDA/fda~ directory and run the command,
+
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
+./fda Ar
+\end{minted}
+
+This will use the \texttt{Ar.inp} file as input and produce two output files, \texttt{Ar.dmp} and \texttt{Ar.out}. The \texttt{00READ.ME} file contains some information about the format of the input file. You can open these files with Emacs to read what they contain.
+
+\subsection{Parsing the dmp file}
+\label{sec-4-1}
+
+In homework 2, you will need to parse the \texttt{.dmp} file to plot some data. It contains the radial grid values and total charge density in two columns, followed by the charge density of each oribital on the same grid. Here we consider an example of how to do this with python.
+
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Lets open the file in read mode
+with open('FDA/fda/Ar.dmp', 'r') as f:
+
+    # Reading all the lines in the file
+    # Each line is stored as an element of a list
+    lines = f.readlines()
+
+    # First we read the grid points and the total charge densities
+    grid_points = []
+    total_charge_densities = []
+
+    for line in lines[3:303]:
+
+        # Each is a string with two columns
+        grid_point, tot_charge_density = line.split()
+
+        # We need to convert each line to a float add it to our lists
+        grid_points.append(float(grid_point))
+        total_charge_densities.append(float(tot_charge_density))
+    
+    # Now for the 1s orbital
+    one_s_charge_density = []
+    
+    for x in lines[304:604]:
+        one_s_charge_density.append(x)
+ 
+    # Alternately,
+    one_s_charge_density_alt = [float(x) for x in lines[304:604]]
+
+plt.figure()
+plt.semilogx(grid_points, total_charge_densities)
+plt.xlabel('Grid Points')
+plt.ylabel('Charge Density')
+plt.title('Overall')
+plt.savefig('images/Ar-overall-charge-density.png')
+
+plt.figure()
+plt.semilogx(grid_points, one_s_charge_density)
+plt.xlabel('Grid Points')
+plt.ylabel('Charge Density')
+plt.title('1s orbital')
+plt.savefig('images/Ar-1s-charge-density.png')
+plt.show()
+\end{minted}
+
+\includegraphics[width=.9\linewidth]{./images/Ar-overall-charge-density.png}
+
+\includegraphics[width=.9\linewidth]{./images/Ar-1s-charge-density.png}
 % Emacs 24.4.3 (Org mode 8.2.10)
 \end{document}

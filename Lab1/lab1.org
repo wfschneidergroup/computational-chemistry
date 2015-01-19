@@ -172,7 +172,7 @@ For the purposes of this course, we will use GNU Emacs as our text editor, and i
 
 * Introduction to Python
   
-Python is a programming language which we will use to solve many of the homework problems, especially density functional theory calculations using VASP (homeworks 5, homework 6, and probably your class project). It is therefore important that you familiarize yourself with using it. The numerical and plotting features in python are mostly similar to =MATLAB=, with a few subtle differences. I would recommend that you try to solve the first problem in homework 2 using python. A few examples are below (adapted from John Kitchin's example files). We won't cover all of these, but you can use them for reference. To execute a code block type ~C-c C-c~.
+Python is a programming language which we will use to solve many of the homework problems, especially density functional theory calculations using VASP (homeworks 5, homework 6, and probably your class project). It is therefore important that you familiarize yourself with using it. The numerical and plotting features in python are mostly similar to =MATLAB=, with a few subtle differences. I would recommend that you try to solve the first problem in homework 2 using python. A few examples are below, adapted (a fancy way of saying pretty much copied) from John Kitchin's example files. We won't cover all of these, but you can use them for reference. To execute a code block type ~C-c C-c~.
 
 ** Simple calculations
 
@@ -447,7 +447,7 @@ else:
 
 #+RESULTS:
 : a is greater than or equal to b
-
+ 
 
 ** Loops
 http://docs.python.org/tutorial/datastructures.html#looping-techniques
