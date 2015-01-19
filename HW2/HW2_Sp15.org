@@ -43,7 +43,18 @@ d. Can you guess an even better approximate wavefunction? Guess a candidate, eva
 
 * Lectures 3: Many-electron atoms
 
-Hartree’s father performed the first calculations on multi-electron atoms by hand. Today those same calculations (much better ones, in fact) can be done in the blink of an eye on a computer. In this problem you will use a code first developed by Herman and Skillman in the 1960’s to calculate the wavefunctions and energy of an atom using the Hartree-Fock-Slater (HFS) model, an early predecessor to DFT. The necessary software, rewritten in =C++=, is compiled and available at https://github.com/wfschneidergroup/computational-chemistry/tree/master/Lab1/FDA/fda. Look at the =00README= file for information about the computer program and the format of the input. If you are brave, glance through the various source files (~*.cxx~) to get a sense of what the code is doing. Note that the code uses atomic units, Hartree for energy and bohr for distance.
+Hartree’s father performed the first calculations on multi-electron atoms by
+hand. Today those same calculations (much better ones, in fact) can be done in
+the blink of an eye on a computer. In this problem you will use a code first
+developed by Herman and Skillman in the 1960’s to calculate the wavefunctions
+and energy of an atom using the Hartree-Fock-Slater (HFS) model, an early
+predecessor to DFT. The necessary software, rewritten in =C++=, is compiled and
+available at
+https://github.com/wfschneidergroup/computational-chemistry/tree/master/Lab1/FDA/fda. Look
+at the =00README= file for information about the computer program and the
+format of the input. If you are brave, glance through the various source files
+(~*.cxx~) to get a sense of what the code is doing. Note that the code uses
+atomic units, Hartree for energy and bohr for distance.
 
 #+ATTR_LATEX: :options [(a)]
 a. Run the =Ar.inp= example included in the directory (~fda Ar~). If all goes well, you should get an output file (=Ar.out=) and a dump file (=Ar.dmp=). Look at the =Ar.out= file to answer these questions:
