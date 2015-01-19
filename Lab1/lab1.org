@@ -858,7 +858,7 @@ with open('FDA/fda/Ar.dmp', 'r') as f:
     one_s_charge_density = []
     
     for x in lines[304:604]:
-        one_s_charge_density.append(x)
+        one_s_charge_density.append(float(x))
  
     # Alternately,
     one_s_charge_density_alt = [float(x) for x in lines[304:604]]

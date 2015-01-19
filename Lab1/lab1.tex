@@ -1,4 +1,4 @@
-% Created 2015-01-18 Sun 21:40
+% Created 2015-01-18 Sun 23:51
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -971,7 +971,7 @@ with open('FDA/fda/Ar.dmp', 'r') as f:
     one_s_charge_density = []
     
     for x in lines[304:604]:
-        one_s_charge_density.append(x)
+        one_s_charge_density.append(float(x))
  
     # Alternately,
     one_s_charge_density_alt = [float(x) for x in lines[304:604]]
@@ -995,5 +995,5 @@ plt.show()
 \includegraphics[width=.9\linewidth]{./images/Ar-overall-charge-density.png}
 
 \includegraphics[width=.9\linewidth]{./images/Ar-1s-charge-density.png}
-% Emacs 24.4.3 (Org mode 8.2.10)
+% Emacs 24.4.1 (Org mode 8.2.10)
 \end{document}
