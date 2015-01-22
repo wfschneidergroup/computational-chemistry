@@ -139,7 +139,7 @@ For the purposes of this course, we will use GNU Emacs as our text editor, and i
 
  Here are a few things to get started.
 
-- Starting Emacs. To start emacs type ~emacs~ on the command line. This will launch emacs with the jmax starter kit (https://github.com/jkitchin/jmax). You can add your own customizations when you start learning more.
+- Starting Emacs. To start emacs type ~emacs &~ on the command line. This will launch emacs with the jmax starter kit (https://github.com/jkitchin/jmax). You can add your own customizations when you start learning more.
 
 - The first screen you will see is called the scratch buffer. It is mainly for doing temporary things that are not generally required to be saved.
 
@@ -159,7 +159,7 @@ For the purposes of this course, we will use GNU Emacs as our text editor, and i
 
 - To close emacs, you can click on the 'X' sign on the corner of your screen or type, ~C-x C-c~.
   
-- Now that you are back at your terminal, use emacs to open the notes for today's lab. Change into the the directory you just cloned, and type ~emacs lab1.org~. This is the org-mode file that was used to create the pdf. All the commands that you just ran in the terminal were run inside this document!
+- Now that you are back at your terminal, use emacs to open the notes for today's lab. Change into the the directory you just cloned, and type ~emacs lab1.org &~. This is the org-mode file that was used to create the pdf. All the commands that you just ran in the terminal were run inside this document!
 
 - Press <TAB> to expand the headings and see what they contain. Navigate to this section of the document. 
 
