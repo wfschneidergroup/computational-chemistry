@@ -75,7 +75,7 @@ g. What is the final dipole moment?
 
 h. What are the Mulliken gross charges on the S and O atoms?
 
-i. Plot out the electrostatic potential of SO2. Which end of the molecule is electrophilic and which is nucleophilic?
+i. Plot out the electrostatic potential of SO_{2}. Which end of the molecule is electrophilic and which is nucleophilic?
 
 ** Geometry Optimization of SO_{2}
 

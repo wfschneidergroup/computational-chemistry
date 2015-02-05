@@ -42,11 +42,12 @@ module avail
 #+END_SRC
 
 
-- The two modules we will need to load today are ~avogadro~ and ~gamess~
+- The modules we will need to load are ~avogadro~, ~gamess~, and ~openbabel~.
 
 #+BEGIN_SRC sh
 module load avogadro
 module load gamess
+module load openbabel
 #+END_SRC
 
 ** Avogadro
