@@ -219,7 +219,7 @@ with open('FDA/Ar.dmp', 'r') as f:
         grid_points.append(float(grid_point))
         total_charge_densities.append(float(tot_charge_density))
 
-    # Alternately,
+    # Now the individual orbitals
     one_s_charge_density = [float(x) for x in lines[304:604]]
     two_s_charge_density = [float(x) for x in lines[605:905]]  
     two_p_charge_density = [float(x) for x in lines[906:1206]]
@@ -278,7 +278,7 @@ The experimental ionization energy of Zn is 906 kJ/mol. From the table we can se
 
 - The total energy after removing one of the cations is -1779.2279 hartree, about 0.3283 hartree more than the neutral Zn atom.
 
-- The orbital energies are tabulated below. All the orbital energies seem to have decreased. The 3s and 4d orbitals move closer to the nucleus.
+- The orbital energies are tabulated below. All the orbital energies seem to have decreased. The 3d and 4d orbitals move closer to the nucleus.
 
 | nl |   occ |         E |    <r> |
 |----+-------+-----------+--------|

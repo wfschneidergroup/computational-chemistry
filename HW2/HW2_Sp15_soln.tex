@@ -1,4 +1,4 @@
-% Created 2015-02-09 Mon 10:02
+% Created 2015-02-09 Mon 10:13
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -266,7 +266,7 @@ with open('FDA/Ar.dmp', 'r') as f:
         grid_points.append(float(grid_point))
         total_charge_densities.append(float(tot_charge_density))
 
-    # Alternately,
+    # Now the individual orbitals
     one_s_charge_density = [float(x) for x in lines[304:604]]
     two_s_charge_density = [float(x) for x in lines[605:905]]  
     two_p_charge_density = [float(x) for x in lines[906:1206]]
@@ -333,7 +333,7 @@ The experimental ionization energy of Zn is 906 kJ/mol. From the table we can se
 \begin{itemize}
 \item The total energy after removing one of the cations is -1779.2279 hartree, about 0.3283 hartree more than the neutral Zn atom.
 
-\item The orbital energies are tabulated below. All the orbital energies seem to have decreased. The 3s and 4d orbitals move closer to the nucleus.
+\item The orbital energies are tabulated below. All the orbital energies seem to have decreased. The 3d and 4d orbitals move closer to the nucleus.
 \end{itemize}
 
 \begin{center}
@@ -354,5 +354,5 @@ nl & occ & E & <r>\\
 \label{sec-2-1-6}
 
 The energy difference between the neutral atom and the cation is 0.3283 Hartree = 861.95 kJ/mol. This is almost the same as what we had earlier.
-% Emacs 24.4.3 (Org mode 8.2.10)
+% Emacs 24.4.1 (Org mode 8.2.10)
 \end{document}
