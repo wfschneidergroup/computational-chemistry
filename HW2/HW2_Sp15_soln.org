@@ -72,6 +72,7 @@ print 'E = {0:1.3f} hartree = {1:1.3f} eV = {2:1.3f} kJ/mol'.format(E_atomic, E_
 #+RESULTS:
 : E = 1.234 hartree = 33.571 eV = 3239.080 kJ/mol
 
+
 *** b)
 The wavefunction, $\psi_{1}(x) = cos (\pi x/2)$, is plotted below. We can see that it obeys the boundary conditions. In the range, $-1 < x < 1$, \psi never equals zero, so there are zero nodes. Also, $\left<\psi|\psi\right> = 1$, so the wavefunction is normalized.
 
@@ -101,6 +102,7 @@ print ans
 : 1.0
 
 [[./images/1b.png]]
+
 
 *** c)
 
@@ -134,7 +136,10 @@ print 'The expectation value of the energy is {0} hartree.'.format(E)
 
 We see that the energy is within 1.3 % of part (a).
 
+
 *** d)
+
+You can guess any wavefunction here, as long as it is normalized. Ideally you would make linear combinations of two or more functions, e.g. $\psi_{1}(x) = c_{1}(1-x^{2}) + c_{2}(1-x^{4})$.
 
 
 * Lectures 3: Many-electron atoms
