@@ -700,7 +700,7 @@ print np.roots(p)
 
 #+BEGIN_SRC python
 import numpy as np
-p = [4, 2, -1]
+p = [-1, 0, 1]
 print np.polyder(p) # coefficients of the derivative
 print np.polyint(p)
 #+END_SRC

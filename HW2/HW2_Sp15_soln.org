@@ -272,7 +272,7 @@ plt.show()
 
 *** d) 
 
-The experimental ionization energy of Zn is 906 kJ/mol. From the table we can see that our first ionization energy is 0.3265 hartree = 857.23 kJ/mol, which is about 5% off from the experimental value. 
+The experimental ionization energy of Zn is 906 kJ/mol (http://www.webelements.com/zinc/atoms.html). From the table we can see that our first ionization energy is 0.3265 hartree = 857.23 kJ/mol, which is about 5% off from the experimental value. 
 
 *** e)
 
