@@ -61,7 +61,7 @@ Now calculate the transition state between acetaldehyde and vinyl alcohol.
 
 - Search from this starting point for the transition state.
 
-- Make sure your calculation converges, and calculate the vibrational spectrum again to make sure you landed at the saddle point. Note the imaginary vibrational mode and add the key internal coordinates to the table above.
+- Make sure your calculation converges, and calculate the vibrational spectrum again to make sure you landed at the saddle point. Note the imaginary vibrational mode and add the key internal coordinates to the table in 1(a).
 
 - Perform single-point MP2/6-31G(d) calculations on the reactant, transition state, and product. Use the results to complete the table of relative energies below:
 
