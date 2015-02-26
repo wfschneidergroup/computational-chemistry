@@ -232,6 +232,10 @@ The Mulliken charges are tabulated below.
 
 *** i)
 
+The electrostatic potential is shown below.
+
+[[file:SO2/SO2-electrostatic-potential.png]]
+
 * Geometry Optimization of SO_{2}
 
 #+ATTR_LATEX: :options [(a)]
