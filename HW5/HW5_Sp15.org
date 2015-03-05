@@ -65,7 +65,7 @@ Now let’s do an O2 molecule. Create an atoms object with the two atoms an appr
 #+ATTR_LATEX: :options [(a)]
 a. Did the geometry converge? (~calc.read_convergence()~)
 
-b. How many relaxation steps were taken? (~calc.get_number_of_steps()~)
+b. How many relaxation steps were taken? (~calc.get_number_of_ionic_steps()~)
 
 c. What is the final O_{2} energy?
 
