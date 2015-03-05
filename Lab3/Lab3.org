@@ -50,7 +50,7 @@ source /afs/crc.nd.edu/user/w/wschnei1/CBE547/software/course_bashrc.sh
 
 If there is a line that says ~module load ase~ in your file, remove it.
 
-For tsch users, you will need to add this to your =.cshrc= file as well as the =.bashrc= file. Go to the terminal and run,
+For tsch users, there is an additional step. Go to the terminal and run,
 
 #+BEGIN_SRC sh
 cd
@@ -74,6 +74,9 @@ If there is a line that says ~module load ase~ in your file, remove it.
 
 *Note: The original =jasp= code has been slightly modified to work with the Notre Dame queue system.*
 
+Prof. J. R. Kitchin wrote a book to accompany =jasp= (http://kitchingroup.cheme.cmu.edu/dft-book/). It contains 100s of examples of using =jasp= for almost every kind of calculation that can be performed using =VASP=. Most of the examples in this document were from that book!
+
+*Note: This is not the most recent version of the book, so some of the functionality might be different to reflect the most recent version of =ase=. For the most recent version go to, https://github.com/jkitchin/dft-book.*
 
 * Creating Molecules
 
@@ -377,11 +380,6 @@ for a in L:
 
 We can see the computational cost went up by a factor of 15! Perhaps you can now appreciate the computational cost involved in simulating 100s of atoms in large boxes!
 
-
-
-* Further Reading: DFT-book
-
-Prof. J. R. Kitchin wrote a book to accompany =jasp= (https://github.com/jkitchin/dft-book). It contains 100s of examples of using =jasp= for almost every kind of calculation that can be performed using =VASP=. Most of the examples in this document were from that book!
 
 
 

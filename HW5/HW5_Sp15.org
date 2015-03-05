@@ -22,6 +22,9 @@
 \author{Prof.\ William F.\ Schneider}
 \maketitle
 
+
+In this homework, we will use =VASP= to perform plane wave density functional theory calculations. If you are having trouble, refer to the notes for Lab 3, or the =ase= website (https://wiki.fysik.dtu.dk/ase/index.html) or dft-book (http://kitchingroup.cheme.cmu.edu/dft-book/dft.html).
+
 * Not Ar again! [[label:sec:Ar]]
 
 As they say, there are many ways to skin a cat! You have computed the wavefunctions of Ar several different ways in homework already — using =FDA=, the descendent of Hartree’s first calculations, and using the molecular orbital =GAMESS= code — so it is only natural to do the same using =VASP=. 

@@ -1,4 +1,4 @@
-% Created 2015-03-04 Wed 21:44
+% Created 2015-03-05 Thu 11:23
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -79,7 +79,7 @@ source /afs/crc.nd.edu/user/w/wschnei1/CBE547/software/course_bashrc.sh
 
 If there is a line that says \verb~module load ase~ in your file, remove it.
 
-For tsch users, you will need to add this to your \texttt{.cshrc} file as well as the \texttt{.bashrc} file. Go to the terminal and run,
+For tsch users, there is an additional step. Go to the terminal and run,
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
 cd
@@ -104,6 +104,9 @@ If there is a line that says \verb~module load ase~ in your file, remove it.
 
 \textbf{Note: The original \texttt{jasp} code has been slightly modified to work with the Notre Dame queue system.}
 
+Prof. J. R. Kitchin wrote a book to accompany \texttt{jasp} (\url{http://kitchingroup.cheme.cmu.edu/dft-book/}). It contains 100s of examples of using \texttt{jasp} for almost every kind of calculation that can be performed using \texttt{VASP}. Most of the examples in this document were from that book!
+
+\textbf{Note: This is not the most recent version of the book, so some of the functionality might be different to reflect the most recent version of \texttt{ase}. For the most recent version go to, \url{https://github.com/jkitchin/dft-book}.}
 
 \section{Creating Molecules}
 \label{sec-4}
@@ -415,18 +418,12 @@ We can see the computational cost went up by a factor of 15! Perhaps you can now
 
 
 
-\section{Further Reading: DFT-book}
-\label{sec-8}
-
-Prof. J. R. Kitchin wrote a book to accompany \texttt{jasp} (\url{https://github.com/jkitchin/dft-book}). It contains 100s of examples of using \texttt{jasp} for almost every kind of calculation that can be performed using \texttt{VASP}. Most of the examples in this document were from that book!
-
-
 
 \section{Miscellaneous}
-\label{sec-9}
+\label{sec-8}
 
 \subsection{Building pdfs from org files}
-\label{sec-9-1}
+\label{sec-8-1}
 
 Using the software you loaded at the beginning of lab, you should be able to build a pdf from your .org files. Let us try that, click on the Org menu and click Export/Publish. Then press 'l' and 'o'. This let's you build a pdf and open it.
 
@@ -434,12 +431,12 @@ Alternately, you can type, \verb~C-c C-e l o~
 
 
 \subsection{Viewing latex equations in org documents}
-\label{sec-9-2}
+\label{sec-8-2}
 
 Click on \url{org-toggle-latex-overlays}. You should be able to see the Schrodinger equation below.
 
 \begin{itemize}
 \item $H\psi = E\psi$
 \end{itemize}
-% Emacs 24.4.2 (Org mode 8.2.10)
+% Emacs 24.4.1 (Org mode 8.2.10)
 \end{document}
