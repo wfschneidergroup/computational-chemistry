@@ -33,37 +33,37 @@ It might make sense to go back and read the lecture notes and notes from Lab 1 a
 
 * Loading the required software
 
-Before we can actually proceed, we will need to tell our computer how it can find all the tools we need. We will store this information so that the software is already loaded for us every time we login in the future. Depending on your default environment, the things you will need to do might be a little different. You can check what unix shell you are using by typing ~echo $0~ into your terminal. 
+Before we can actually proceed, we will need to tell our computer how it can find all the tools we need. We will store this information so that the software is already loaded for us every time we login in the future. Depending on your unix shell, the things we need to do will be a little different. You can see which shell you are using with the command ~echo $0~. 
 
-** Bash users only!
-
-For bash users, go to your home directory and open the =.bashrc= file, i.e., run the following two commands. 
+The software we need is dependent on the bash shell and thus we (all users) need to add a few commands to our ~.bashrc~ file. Go to your home directory and open the =.bashrc= file, i.e., run the following two commands. 
 
 #+BEGIN_SRC sh
 cd
 emacs .bashrc
 #+END_SRC
 
-Once there, add the following line at the bottom of the file and save it (Make sure there are no typos!). If there is a line that says ~module load ase~ in your file, remove it.
+Once there, add the following line at the bottom of the file and save it (Make sure there are no typos!).
 
 #+BEGIN_EXAMPLE
 source /afs/crc.nd.edu/user/w/wschnei1/CBE547/software/course_bashrc.sh
 #+END_EXAMPLE
 
-** Tcsh/csh users!
+If there is a line that says ~module load ase~ in your file, remove it.
 
-For tcsh users, go to your home directory and open the =.cshrc= file, i.e., run the following two commands.
+For tsch users, you will need to add this to your =.cshrc= file as well as the =.bashrc= file. Go to the terminal and run,
 
 #+BEGIN_SRC sh
 cd
 emacs .cshrc
 #+END_SRC
 
-Once there, add the following line at the bottom of the file and save it (Make sure there are no typos!). If there is a line that says ~module load ase~ in your file, remove it.
+Once there, add the following line at the bottom of the file and save it (Make sure there are no typos!). 
 
 #+BEGIN_EXAMPLE
 source /afs/crc.nd.edu/user/w/wschnei1/CBE547/software/course_cshrc.sh
 #+END_EXAMPLE
+
+If there is a line that says ~module load ase~ in your file, remove it.
 
 *Now logout and log back in*. Once this is done, go to computational-chemistry/Lab3/ and open it Lab3.org in emacs.
 
@@ -227,7 +227,7 @@ We will now perform a simple calculation on our CO molecule. This is done by cre
 
 The first time we run this code, a calculation will be submitted to the Notre Dame queue system. So when you try to print the potential energy of you will get an exception saying VaspSubmitted. You can check the status of the job by going back to the terminal and typing ~qstat -u netid~. Once the job has finished running you can rerun the code, and if all went well, it should give you the energies and the forces.
 
-#+BEGIN_SRC python
+#+BEGIN_SRC python :tangle example.py
 from ase import Atoms, Atom
 from ase.io import write
 from ase.visualize import view

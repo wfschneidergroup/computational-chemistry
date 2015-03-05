@@ -1,4 +1,4 @@
-% Created 2015-03-04 Wed 01:43
+% Created 2015-03-04 Wed 19:02
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -62,39 +62,37 @@ It might make sense to go back and read the lecture notes and notes from Lab 1 a
 \section{Loading the required software}
 \label{sec-2}
 
-Before we can actually proceed, we will need to tell our computer how it can find all the tools we need. We will store this information so that the software is already loaded for us every time we login in the future. Depending on your default environment, the things you will need to do might be a little different. You can check what unix shell you are using by typing \verb~echo $0~ into your terminal. 
+Before we can actually proceed, we will need to tell our computer how it can find all the tools we need. We will store this information so that the software is already loaded for us every time we login in the future. Depending on your unix shell, the things we need to do will be a little different. You can see which shell you are using with the command \verb~echo $0~. 
 
-\subsection{Bash users only!}
-\label{sec-2-1}
-
-For bash users, go to your home directory and open the \texttt{.bashrc} file, i.e., run the following two commands. 
+The software we need is dependent on the bash shell and thus we (all users) need to add a few commands to our \verb~.bashrc~ file. Go to your home directory and open the \texttt{.bashrc} file, i.e., run the following two commands. 
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
 cd
 emacs .bashrc
 \end{minted}
 
-Once there, add the following line at the bottom of the file and save it (Make sure there are no typos!). If there is a line that says \verb~module load ase~ in your file, remove it.
+Once there, add the following line at the bottom of the file and save it (Make sure there are no typos!).
 
 \begin{verbatim}
 source /afs/crc.nd.edu/user/w/wschnei1/CBE547/software/course_bashrc.sh
 \end{verbatim}
 
-\subsection{Tcsh/csh users!}
-\label{sec-2-2}
+If there is a line that says \verb~module load ase~ in your file, remove it.
 
-For tcsh users, go to your home directory and open the \texttt{.cshrc} file, i.e., run the following two commands.
+For tsch users, you will need to add this to your \texttt{.cshrc} file as well as the \texttt{.bashrc} file. Go to the terminal and run,
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos]{sh}
 cd
 emacs .cshrc
 \end{minted}
 
-Once there, add the following line at the bottom of the file and save it (Make sure there are no typos!). If there is a line that says \verb~module load ase~ in your file, remove it.
+Once there, add the following line at the bottom of the file and save it (Make sure there are no typos!). 
 
 \begin{verbatim}
 source /afs/crc.nd.edu/user/w/wschnei1/CBE547/software/course_cshrc.sh
 \end{verbatim}
+
+If there is a line that says \verb~module load ase~ in your file, remove it.
 
 \textbf{Now logout and log back in}. Once this is done, go to computational-chemistry/Lab3/ and open it Lab3.org in emacs.
 
@@ -476,7 +474,7 @@ Prof. J. R. Kitchin wrote a book to accompany \texttt{jasp} (\url{https://github
 
 Using the software you loaded at the beginning of lab, you should be able to build a pdf from your .org files. Let us try that, click on the Org menu and click Export/Publish. Then press 'l' and 'o'. This let's you build a pdf and open it.
 
-Alternately, you can type, \verb~C-c C-e l o~ to export a pdf.
+Alternately, you can type, \verb~C-c C-e l o~
 
 
 \subsection{Viewing latex equations in org documents}
