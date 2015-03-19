@@ -1,4 +1,4 @@
-#+TITLE:Computational Chemistry Laboratory I (CBE 60553)
+#+TITLE:Computational Chemistry Laboratory I (CBE 60547)
 #+AUTHOR: Prateek Mehta, William F. Schneider
 #+DATE:2015-01-22 Thu
 #+LATEX_CLASS: article

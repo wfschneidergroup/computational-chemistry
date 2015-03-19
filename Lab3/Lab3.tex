@@ -1,4 +1,4 @@
-% Created 2015-03-05 Thu 11:23
+% Created 2015-03-19 Thu 18:28
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -35,7 +35,7 @@ citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
 \usepackage[parfill]{parskip}
 \author{Prateek Mehta, William F. Schneider}
 \date{03-05-2015 Thu}
-\title{Computational Chemistry Laboratory II (CBE 60553)}
+\title{Computational Chemistry Laboratory III (CBE 60547)}
 \begin{document}
 
 \maketitle
@@ -108,6 +108,7 @@ Prof. J. R. Kitchin wrote a book to accompany \texttt{jasp} (\url{http://kitchin
 
 \textbf{Note: This is not the most recent version of the book, so some of the functionality might be different to reflect the most recent version of \texttt{ase}. For the most recent version go to, \url{https://github.com/jkitchin/dft-book}.}
 
+
 \section{Creating Molecules}
 \label{sec-4}
 
@@ -132,7 +133,7 @@ atoms.center() # For a better visualization
 
 print('V = {0:1.0f} Angstrom^3'.format(atoms.get_volume()))
 write('images/simple-cubic-cell.png', atoms, show_unit_cell=2)
-# view(atoms)
+view(atoms)
 \end{minted}
 
 \begin{verbatim}
@@ -154,7 +155,7 @@ from ase.visualize import view
 
 atoms = molecule('CO')
 
-# view(atoms)
+view(atoms)
 print atoms
 print 'Old Cell:'
 print atoms.get_cell()
@@ -164,18 +165,6 @@ print 'New Cell:'
 print atoms.get_cell()
 view(atoms)
 \end{minted}
-
-\begin{verbatim}
-Atoms(symbols='OC', positions=..., cell=[1.0, 1.0, 1.0], pbc=[False, False, False])
-Old Cell:
-[[ 1.  0.  0.]
- [ 0.  1.  0.]
- [ 0.  0.  1.]]
-New Cell:
-[[ 10.   0.   0.]
- [  0.  10.   0.]
- [  0.   0.  10.]]
-\end{verbatim}
 
 The g2 set as implemented in ase is given below.
 
@@ -273,10 +262,14 @@ from ase.io import write
 from ase.visualize import view
 from jasp import jasp
 
+JASPRC['queue.q'] = 'long'
+JASPRC['queue.nprocs'] = 8
+JASPRC['queue.pe'] = '*@@schneider'
+
 # define an Atoms object
 co = Atoms([Atom('C', [0., 0., 0.]),
-               Atom('O', [1.1, 0., 0.])],
-              cell=(10, 10, 10))
+            Atom('O', [1.1, 0., 0.])],
+           cell=(10, 10, 10))
 
 with jasp('molecules/simple-co',  # output dir relative to current dir
           xc='PBE',  # the exchange-correlation functional
@@ -292,6 +285,50 @@ with jasp('molecules/simple-co',  # output dir relative to current dir
     print calc # Prints a summary of the calculation
     #Note: some properties are attributes of the atoms object and some of the calc.
 \end{minted}
+
+\begin{verbatim}
+energy = -14.69232797 eV
+Forces (eV/Ang.):
+[[-5.777  0.     0.   ]
+ [ 5.777  0.     0.   ]]
+SCF iterations = 16
+: -----------------------------
+  VASP calculation from /afs/crc.nd.edu/user/p/pmehta1/computational-chemistry/Lab3/molecules/simple-co
+  converged: True
+  Energy = -14.692328 eV
+
+  Unit cell vectors (angstroms)
+        x       y     z      length
+  a0 [ 10.000  0.000  0.000] 10.000
+  a1 [ 0.000  10.000  0.000] 10.000
+  a2 [ 0.000  0.000  10.000] 10.000
+  a,b,c,alpha,beta,gamma (deg):10.000 10.000 10.000 90.0 90.0 90.0
+  Unit cell volume = 1000.000 Ang^3
+  Stress (GPa):xx,   yy,    zz,    yz,    xz,    xy
+            -0.004  0.002  0.002-0.000 -0.000 -0.000
+ Atom#  sym       position [x,y,z]tag  rmsForce constraints
+   0    C   [0.000      0.000      0.000]  0   5.78      T T T
+   1    O   [1.100      0.000      0.000]  0   5.78      T T T
+--------------------------------------------------
+
+INCAR Parameters:
+-----------------
+        nbands: 8
+        ismear: 1
+         encut: 350.0
+         sigma: 0.01
+        magmom: None
+          kpts: [1, 1, 1]
+    reciprocal: False
+            xc: PBE
+           txt: -
+         gamma: False
+
+Pseudopotentials used:
+----------------------
+C: potpaw_PBE/C/POTCAR (git-hash: ee4d8576584f8e9f32e90853a0cbf9d4a9297330)
+O: potpaw_PBE/O/POTCAR (git-hash: 592f34096943a6f30db8749d13efca516d75ec55)
+\end{verbatim}
 
 We can also look at the files created by \texttt{VASP} to see if everything went ok. 
 
@@ -438,5 +475,5 @@ Click on \url{org-toggle-latex-overlays}. You should be able to see the Schrodin
 \begin{itemize}
 \item $H\psi = E\psi$
 \end{itemize}
-% Emacs 24.4.1 (Org mode 8.2.10)
+% Emacs 24.4.3 (Org mode 8.2.10)
 \end{document}

@@ -16,7 +16,7 @@
 #+LATEX_HEADER: \usepackage{enumerate}
 #+LATEX_HEADER: \usepackage[parfill]{parskip}
 
-\title{Homework 3\\Lectures 4: Electronic Structure Models\\(CBE 60553)}
+\title{Homework 3\\Lectures 4: Electronic Structure Models\\(CBE 60547)}
 \author{Prateek Mehta, Prof. William F.\ Schneider}
 \maketitle
 

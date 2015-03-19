@@ -18,7 +18,7 @@
 #+LATEX_HEADER: \usepackage[parfill]{parskip}
 #+LATEX_HEADER: \usepackage[version=3]{mhchem}
 
-\title{Homework 4\\Lectures 5: Potential Energy Sufaces\\(CBE 60553)}
+\title{Homework 4\\Computational Chemistry\\(CBE 60547)}
 \author{Prof.\ William F.\ Schneider}
 \maketitle
 

@@ -1,4 +1,4 @@
-% Created 2015-01-18 Sun 21:24
+% Created 2015-03-19 Thu 18:25
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -38,7 +38,7 @@ citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
 \title{}
 \begin{document}
 
-\title{Homework 2\\Computational Chemistry\\(CBE 60553)}
+\title{Homework 2\\Computational Chemistry\\(CBE 60547)}
 \author{Prof. William F.\ Schneider}
 \maketitle
 
@@ -68,7 +68,18 @@ V(x)=
 \section{Lectures 3: Many-electron atoms}
 \label{sec-2}
 
-Hartree’s father performed the first calculations on multi-electron atoms by hand. Today those same calculations (much better ones, in fact) can be done in the blink of an eye on a computer. In this problem you will use a code first developed by Herman and Skillman in the 1960’s to calculate the wavefunctions and energy of an atom using the Hartree-Fock-Slater (HFS) model, an early predecessor to DFT. The necessary software, rewritten in \texttt{C++}, is compiled and available at \url{https://github.com/wfschneidergroup/computational-chemistry/tree/master/Lab1/FDA/fda}. Look at the \texttt{00README} file for information about the computer program and the format of the input. If you are brave, glance through the various source files (\verb~*.cxx~) to get a sense of what the code is doing. Note that the code uses atomic units, Hartree for energy and bohr for distance.
+Hartree’s father performed the first calculations on multi-electron atoms by
+hand. Today those same calculations (much better ones, in fact) can be done in
+the blink of an eye on a computer. In this problem you will use a code first
+developed by Herman and Skillman in the 1960’s to calculate the wavefunctions
+and energy of an atom using the Hartree-Fock-Slater (HFS) model, an early
+predecessor to DFT. The necessary software, rewritten in \texttt{C++}, is compiled and
+available at
+\url{https://github.com/wfschneidergroup/computational-chemistry/tree/master/Lab1/FDA/fda}. Look
+at the \texttt{00README} file for information about the computer program and the
+format of the input. If you are brave, glance through the various source files
+(\verb~*.cxx~) to get a sense of what the code is doing. Note that the code uses
+atomic units, Hartree for energy and bohr for distance.
 
 \begin{enumerate}[(a)]
 \item Run the \texttt{Ar.inp} example included in the directory (\verb~fda Ar~). If all goes well, you should get an output file (\texttt{Ar.out}) and a dump file (\texttt{Ar.dmp}). Look at the \texttt{Ar.out} file to answer these questions:

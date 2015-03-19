@@ -16,7 +16,7 @@
 #+LATEX_HEADER: \usepackage{enumerate}
 #+LATEX_HEADER: \usepackage[parfill]{parskip}
 
-\title{Homework 2\\Computational Chemistry\\(CBE 60553)}
+\title{Homework 2\\Computational Chemistry\\(CBE 60547)}
 \author{Prof. William F.\ Schneider}
 \maketitle
 
