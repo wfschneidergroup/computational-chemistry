@@ -23,7 +23,7 @@
 \author{Prof.\ William F.\ Schneider}
 \maketitle
 
-This is going to be fun! The goal of this assignment is to study bonding behavior of adsorbates on transition metal surfaces.
+The goal of this assignment is to study bonding behavior of adsorbates on transition metal surfaces.
 
 - You will work in randomly generated groups of two for this homework. 
 
@@ -37,7 +37,7 @@ This is going to be fun! The goal of this assignment is to study bonding behavio
   - The naming convention for each calculation has been provided in the appropriate section.
   - Deviations from the naming convention will be reflected on your grade.
 
-- For all calculations, a planewave cutoff of 400 eV should be used and the PBE exchange-correlation functional should be used.
+- For all calculations, a planewave cutoff of 400 eV and the PBE exchange-correlation functional should be used.
 
 Here is some code adapted from https://docs.python.org/2/library/itertools.html that randomly creates the groups.
 
