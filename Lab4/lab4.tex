@@ -1,4 +1,4 @@
-% Created 2015-03-23 Mon 05:48
+% Created 2015-03-23 Mon 14:34
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -59,13 +59,13 @@ Mostly everyone did a good job on the last homework. There were a few common mis
 \item absolute DFT energies are meaningless!
 \end{itemize}
 
-\item Use consistent energy cutoffs when comparing different calculations.
+\item Use consistent planewave cutoffs when comparing different calculations.
 
 \item Typos, spelling mistakes, forgetting to change directory names
 
 \item \texttt{jasp} is built for continuation runs
 \begin{itemize}
-\item \texttt{jasp} reads the input parameters from the files in the directory
+\item reads the input parameters from the files in the directory
 \item jobs are resubmitted if parameters are added or updated
 \item If parameters are removed, the original parameters written in your directory \textbf{will stay!}
 \item Changing atoms objects after running the code is a bad idea! (\texttt{jasp} got updated to raise errors if you do this)
@@ -459,7 +459,7 @@ O: potpaw_PBE/O/POTCAR (git-hash: 592f34096943a6f30db8749d13efca516d75ec55)
 Pd: potpaw_PBE/Pd/POTCAR (git-hash: 04426435b178dfad58ed91b470847d50ff70b858)
 \end{verbatim}
 
-\includegraphics[width=1in]{./images/Pd-slab-O-fcc.png}
+\includegraphics[width=2in]{./images/Pd-slab-O-fcc.png}
 
 
 

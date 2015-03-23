@@ -28,12 +28,12 @@ Mostly everyone did a good job on the last homework. There were a few common mis
   - e.g. for oxygen, bond energy is $E_{O_{2}} + E_{ZPE} - 2E_{O}$ 
   - absolute DFT energies are meaningless!
 
-- Use consistent energy cutoffs when comparing different calculations.
+- Use consistent planewave cutoffs when comparing different calculations.
 
 - Typos, spelling mistakes, forgetting to change directory names
 
 - =jasp= is built for continuation runs
-  - =jasp= reads the input parameters from the files in the directory
+  - reads the input parameters from the files in the directory
   - jobs are resubmitted if parameters are added or updated
   - If parameters are removed, the original parameters written in your directory *will stay!*
   - Changing atoms objects after running the code is a bad idea! (=jasp= got updated to raise errors if you do this)
@@ -247,9 +247,6 @@ from jasp import *
 from ase.visualize import view
 from ase.constraints import FixAtoms
 
-JASPRC['queue.nprocs'] = 8
-JASPRC['queue.q'] = 'short'
-
 a = 3.932 # Optimal lattice constant from EOS
 atoms = fcc111('Pd', size=(2,2,3), vacuum=10.0, a=a)
 
@@ -416,7 +413,7 @@ O: potpaw_PBE/O/POTCAR (git-hash: 592f34096943a6f30db8749d13efca516d75ec55)
 Pd: potpaw_PBE/Pd/POTCAR (git-hash: 04426435b178dfad58ed91b470847d50ff70b858)
 #+end_example
 
-#+ATTR_LATEX: :width 1in
+#+ATTR_LATEX: :width 2in
 [[./images/Pd-slab-O-fcc.png]]
 
 
@@ -470,7 +467,7 @@ States to the left of the fermi level (indicated by the red line) are the occupi
 
 To figure out which density of states belong to which atoms in a molecule, we need to perform an additional calculation. We can compute the atom-projected density of states (ADOS), which is done by projecting the wave function onto localized atomic orbitals. These are only a qualitative representation of the orbitals, because the atoms will often form molecular orbitals, hybridize, etc. 
 
-In =VASP= we can specify an [[incar:RWIGS][RWIGS]] parameter, which is radius around the atom at which to cutoff the projection. The choice of RWIGS is somewhat arbitrary, one can choose the ionic radius of an atom, or a value that minimizes overlap of neighboring spheres. Another way to calculate the ADOS is by specifying the [[http://cms.mpi.univie.ac.at/vasp/vasp/LORBIT.html][LORBIT]] parameter to be 10 or 11, but this only works for PAW potentials (this is what we will use).
+In =VASP= we can specify an [[incar:RWIGS][RWIGS]] parameter, which is the radius around the atom at which to cutoff the projection. The choice of RWIGS is somewhat arbitrary, one can choose the ionic radius of an atom, or a value that minimizes overlap of neighboring spheres. Another way to calculate the ADOS is by specifying the [[http://cms.mpi.univie.ac.at/vasp/vasp/LORBIT.html][LORBIT]] parameter to be 10 or 11, but this only works for PAW potentials (this is what we will use).
 
 In transition metals, the s and p states are dispersed, and the only states that matter in terms of bonding are the d-states. Here is an example to plot the DOS projected on to the d states for clean Pd surface atoms.
 
@@ -528,8 +525,6 @@ import matplotlib.pyplot as plt
 # get the geometry the previous calculation
 with jasp('surfaces/O-on-Pd-fcc') as calc:
     atoms = calc.get_atoms()
-
-JASPRC['queue.q'] = 'short'
 
 #Now submit a calculation for the ados
 with jasp('surfaces/O-on-Pd-fcc-ados',
