@@ -1,7 +1,6 @@
-
 #+TITLE:
 #+AUTHOR:
-#+DATE: Due: <2015-04-09 Thu>
+#+DATE: Due: <2015-04-02 Thu>
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [11pt]
 #+OPTIONS: ^:{} # make super/subscripts only when wrapped in {}
@@ -121,21 +120,22 @@ Calculate the cohesive energy of all your metals. How do they compare with exper
 
 
 
-* Surface Energies
+* Surfaces and Surface Energies
 
-Next you will calculate the surface energy, i.e. the energy to separate the FCC crystal to expose one of its surfaces. You will represent the fcc(111) surface as a (2,2,3) slab with 10 \AA of vacuum. Use the optimized lattice constant. Apply a constraint so that the atoms in the bottom layer are fixed. Then, perform a geometry optimization with ~ibrion=2~ and ~nsw=20~.
-
+Next you will calculate the surface energy, i.e. the energy to separate the FCC crystal to expose one of its surfaces. You will represent the fcc(111) surface as a (2,2,3) slab with 10 \AA of vacuum. Use the optimized lattice constant. Then perform a geometry optimization with ~ibrion=2~ and ~nsw=20~. 
 Use the optimized energy of the slab to calculate the surface energy in eV/\AA. The surface energy is defined as,
 
 $\gamma = \frac{E_{slab} - nE_{bulk}}{2A}$
 
-where A is the surface area of the slab, and n is the number of metal atoms in the slab. $E_{bulk}$ is the energy per atom of the bulk metal.
+where A is the surface area of the slab, and n is the number of metal atoms in the slab divided by the number of metal atoms in the bulk. $E_{bulk}$ is the energy of the bulk metal. Note that to calculate surface energies, you need symmetric slabs, so do not use any constraints! (We will not use any constraints in this homework).
 
 *Please perform the calculations in '{0}-surface'.format(metal)*
 
 * Adsorbates and Adsorption Energies
 
-One reason to model a slab is to study adsorption at its surface.  For your metals, determine the binding energy of an O atom adsorbed at the 'fcc' site of the fcc(111) surface. It is defined as,
+One reason to model a slab is to study adsorption at its surface.  For your metals, determine the binding energy of an O atom adsorbed at the 'fcc' site of the fcc(111) surface. 
+
+It is defined as,
 
 $E_{ads} = E_{O+surface} - E_{surface} - 0.5 E_{O_{2}}$
 
